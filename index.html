@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Designer & Developer</title>
   <link rel="stylesheet" href="mainpage.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <header class="main-header">
-    <div class="logo">★</div>
+  <header class="flex justify-between items-center px-6 py-4">
+    <div class="logo text-3xl">★</div>
     <nav class="nav">
-      <ul>
+      <ul class="flex gap-6 text-sm md:text-base">
         <li><a href="#" class="active">Home Page</a></li>
         <li><a href="#">About Me</a></li>
         <li><a href="#">My Work</a></li>
@@ -19,11 +20,12 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>WEB DESIGNER &</h2>
-    <h1>
+  <section class="hero text-center px-4 sm:px-8 md:px-16 py-8">
+    <h2 class="text-xl md:text-2xl mb-4">WEB DESIGNER &</h2>
+    
+    <h1 class="flex flex-wrap justify-center gap-2 text-[10vw] sm:text-[7vw] md:text-[5vw] leading-none">
       <span class="D">D</span>
-      <span class="E">E</span>
+      <span class="E1">E</span>
       <span class="V">V</span>
       <span class="E2">E</span>
       <span class="L">L</span>
