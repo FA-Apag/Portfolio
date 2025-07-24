@@ -5,6 +5,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('Font/ArchivoNarrow-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* variable weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('Font/ArchivoNarrow-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* same weight range */
+  font-style: italic;
+}
 
 * {
   margin: 0;
@@ -33,12 +46,16 @@ body {
 }
 
 .nav ul {
+  font-family: 'Archivo Narrow';
   list-style: none;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 5px;
   font-size: 14px;
+  margin-top: 20px;
   text-transform: uppercase;
 }
+
 
 .nav a {
   text-decoration: none;
@@ -52,7 +69,7 @@ body {
 }
 
 .hero {
-  padding: 40px;
+
 }
 
 .hero h2 {
@@ -63,9 +80,7 @@ body {
 .hero h1 {
   display: flex;
   justify-content: space-between;
-  font-size: 11vw; /* Responsive font */
-  padding: 0 1vw;
-  letter-spacing: -0.5vw; /* Tweak if needed */
+  letter-spacing: -0.5vw; 
   width: 100vw;
   overflow: hidden;
 }
