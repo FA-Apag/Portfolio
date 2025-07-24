@@ -54,17 +54,18 @@ body {
 .hero h1 {
   font-size: 100px;
   font-weight: 900;
-  color: crimson;
   display: flex;
   flex-wrap: wrap;
   line-height: 1;
   letter-spacing: 4px;
 }
 
-.hero h1 span {
-  display: inline-block;
-  padding: 0 5px;
-  color: crimson;
-  border: 2px solid crimson;
-  margin: 2px;
+.D, .V, .E2, .L, .E3, .R {
+  color: #9F1B30;
+}
+
+/* White letters with red border */
+.O, .P, .E{
+  color: white; /* Fill color (white = transparent when background is also white) */
+  -webkit-text-stroke: 2px #9F1B30; /* Red outline */
 }
