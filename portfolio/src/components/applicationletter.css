@@ -1,0 +1,51 @@
+.application-letter {
+    width: 90%;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #faf9f6;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.letter-title {
+    margin: 0 0 2rem 0;
+
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(2rem, 2.8vw, 3.4rem);
+    line-height: .9;
+    color: #0d3b5a;
+}
+
+.letter-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.letter-body p {
+    margin: 0 0 1.5rem 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #4d6478;
+}
+
+.greeting,
+.closing {
+    margin-left: 0;
+}
+
+.closing {
+    margin-top: 2rem;
+}
+
+.closing strong {
+    color: #0d3b5a;
+}

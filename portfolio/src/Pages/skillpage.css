@@ -1,0 +1,11 @@
+
+.skill-page {
+  background-color: #F6EEDC;
+  margin: 0;
+  padding: .5rem 1.5rem 0 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}

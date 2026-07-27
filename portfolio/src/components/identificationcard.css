@@ -1,0 +1,187 @@
+.identification-card-wrapper {
+  /* No width/height needed here, it wraps the card */
+}
+
+.identification-card {
+  width: 1000px;
+  max-width: 90vw;
+  margin: 0;
+  background: #fafafa;
+  border: none;
+  border-radius: 28px;
+  padding: 28px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.identification-card-wrapper:hover .identification-card {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.identification-card-wrapper.slipped .identification-card {
+  transform: translateY(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.identification-card-wrapper.slipped:hover .identification-card {
+  transform: translateY(15px);
+}
+
+.paperclips {
+  position: absolute;
+  top: -40px;
+  left: 45%;
+  transition: transform 0.3s ease;
+}
+
+.identification-card-wrapper.slipped .paperclips {
+  transform: translateY(-40px);
+}
+
+.card-top {
+  display: flex;
+  gap: 38px;
+}
+
+.image {
+  width: 220px;
+  align-self: stretch;
+  background: #d7d7d7;
+  border-radius: 2px;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  flex: 1;
+}
+
+.titlecard {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #042d49;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row2 {
+  padding-top: 18px;
+  border-top: 1px dashed #777;
+}
+
+.column1,
+.column2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 45%;
+}
+
+.label {
+  margin: 0;
+  color: #555;
+  font-size: 17px;
+}
+
+.label span {
+  color: black;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.signiture {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.signiture.title {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: -28px;
+}
+
+.signiture.line {
+  font-family: "Brush Script MT", cursive;
+  font-size: 4rem;
+  color: #032b44;
+  line-height: 1;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.barcode {
+  flex: 1;
+  height: 42px;
+  background: repeating-linear-gradient(
+    to right,
+    #032b44 0px,
+    #032b44 4px,
+    transparent 4px,
+    transparent 6px,
+    #032b44 6px,
+    #032b44 7px,
+    transparent 7px,
+    transparent 12px,
+    #032b44 12px,
+    #032b44 20px,
+    transparent 20px,
+    transparent 22px,
+    #032b44 22px,
+    #032b44 25px,
+    transparent 25px,
+    transparent 27px,
+    #032b44 27px,
+    #032b44 33px,
+    transparent 33px,
+    transparent 36px
+  );
+}
+
+.barcodedetails {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+.barcodedetails .label {
+  font-size: 12px;
+  text-align: right;
+}
