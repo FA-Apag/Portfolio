@@ -1,22 +1,21 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import "../style.css";
 import Homepage from "./Pages/homepage";
 import AboutMe from "./Pages/aboutme";
 import Folder from "./components/folder";
 import Skill from "./Pages/skillpage";
+import Contact from "./Pages/contactpage";
 import "./components/folder.css";
 
 import "@fontsource/anton";
 import "@fontsource/bevan";
 import "@fontsource/inria-serif";
-
-const FOLDERS = [
+const FOLDERS = [
   { id: "about",     title: "About me",  color: "#002F49", textColor: "#FFFFFF", left: "11in" },
-  { id: "education", title: "Education", color: "#780001", textColor: "#FFFFFF", left: ".5in" },
-  { id: "contacts",  title: "Contacts",  color: "#669BBB", textColor: "#ffffff", left: "7.3in" },
-  { id: "skills",    title: "Skills",    color: "#F6EEDC", textColor: "#780001", left: "3in" },
-  { id: "projects",  title: "Projects",  color: "#BC0026", textColor: "#FFFFFF", left: "9in" },
+  { id: "contacts",  title: "Contacts",  color: "#669BBB", textColor: "#ffffff", left: ".5in" },
+  { id: "skills",    title: "Skills",    color: "#780001", textColor: "#FFFFFF", left: "4in" },
+  { id: "projects",  title: "Projects",  color: "#BC0026", textColor: "#FFFFFF", left: "8in" },
 ];
 
 export default function App() {
@@ -34,6 +33,10 @@ export default function App() {
   }, []);
 
   const handleRevealFolders = useCallback(() => {
+    setActiveFolder(null);
+    setDisplayPageId(null);
+    setTransitioningFolderId(null);
+    setAnimationPhase(null);
     setFoldersRevealed(true);
   }, []);
 
@@ -70,7 +73,7 @@ export default function App() {
     : FOLDERS;
 
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-background min-h-screen flex flex-col">
       <Homepage
         onRevealFolders={handleRevealFolders}
         foldersRevealed={foldersRevealed}
@@ -102,10 +105,9 @@ export default function App() {
         })}
       </div>
 
-      <main className="relative z-10">
+      <main className="relative z-10 flex-grow flex flex-col">
         {displayPageId === "about" && <AboutMe />}
-        {displayPageId === "education" && <AboutMe />}
-        {displayPageId === "contacts" && <Homepage />}
+        {displayPageId === "contacts" && <Contact />}
         {displayPageId === "skills" && <Skill />}
         {displayPageId === "projects" && <Homepage />}
       </main>

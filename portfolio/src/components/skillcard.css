@@ -1,0 +1,56 @@
+.skillcard-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #000;
+  padding: 12px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.skillcard-header {
+  border-bottom: 2px solid #8B5A46;
+  padding: 16px;
+}
+
+.skillcard-header-title {
+  margin: 0;
+  color: #3D2A2A;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+.skillcard-header-subtitle {
+  margin: 0;
+  color: #7D5A67;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.skillcard-info-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #000;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.skillcard-info-box {
+  padding: 8px;
+}
+
+.skillcard-info-box:first-child {
+  border-right: 1px solid #000;
+}
+
+.skillcard-info-label {
+  margin: 0 0 4px;
+  color: #6b7280;
+}
+
+.skillcard-info-value {
+  margin: 0;
+  font-weight: 600;
+}

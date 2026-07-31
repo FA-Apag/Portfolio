@@ -112,8 +112,8 @@
 /* Oval CTA Button */
 .cta-oval-badge {
   position: absolute;
-  right: clamp(1rem, 6vw, 8rem);
-  top: -30px;
+  right: clamp(3rem, 10vw, 12rem);
+  top: clamp(2rem, 4vw, 4rem);
   background-color: #002F49;
   color: #FFFFFF;
   font-family: "Inria Serif", serif;

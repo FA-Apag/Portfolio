@@ -1,0 +1,73 @@
+.education-paper {
+    background: #f8efe3;
+    color: #333;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family:"Inria Serif";
+    width: 90%;
+}
+
+.educationtitle{
+    font-family: "Anton", sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    color: #8b2e2e;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.paper-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.paper-body{
+    display:grid;
+    grid-template-columns:1.6fr .7fr;
+    gap:3rem;
+}
+
+.left-column p{
+    line-height:1.9;
+    text-align:justify;
+}
+
+blockquote{
+    margin-top:2rem;
+    font-style:italic;
+    border-left:3px solid #b35b5b;
+    padding-left:1rem;
+}
+
+.subject-group{
+    margin-bottom:1.5rem;
+}
+
+.subject-group h4{
+    margin-bottom:.4rem;
+    color:#8b2e2e;
+}
+
+.subject-group ul{
+    padding-left:1.2rem;
+}
+
+.paper-footer{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid rgba(0,0,0,.15);
+    padding-top:1rem;
+    font-size:.85rem;
+    letter-spacing:.08em;
+}
+
+.secondparagraph{
+    margin-top: 1rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.subtitle{
+    margin-top: 2rem;    
+}

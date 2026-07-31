@@ -1,24 +1,20 @@
 import "./applicationletter.css";
 
-export default function ApplicationLetter({
-  name,
-}: {
-  name: string;
-}) {
+export default function ApplicationLetter() {
   return (
     <main className="application-letter">
-      <header className="letter-title">
+      <header className="applicationletter-title">
         COVER
         <br />
         LETTER
       </header>
 
-      <section className="letter-body">
-        <p className="greeting">Dear Hiring Manager,</p>
+      <section className="applicationletter-body">
+        <p className="applicationletter-greeting">Dear Hiring Manager,</p>
 
         <p>
           Thank you for taking the time to explore my portfolio. This
-          collection represents more than a list of projects—it reflects my
+          collection represents more than a list of projects. It reflects my
           growth as a developer, the challenges I've embraced, and the skills
           I've built through continuous learning and hands-on experience.
         </p>

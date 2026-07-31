@@ -13,7 +13,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.letter-title {
+.applicationletter-title {
     margin: 0 0 2rem 0;
 
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -22,12 +22,12 @@
     color: #0d3b5a;
 }
 
-.letter-body {
+.applicationletter-body {
     display: flex;
     flex-direction: column;
 }
 
-.letter-body p {
+.applicationletter-body p {
     margin: 0 0 1.5rem 0;
 
     font-family: Georgia, "Times New Roman", serif;
@@ -37,15 +37,15 @@
     color: #4d6478;
 }
 
-.greeting,
-.closing {
+.applicationletter-greeting,
+.applicationletter-closing {
     margin-left: 0;
 }
 
-.closing {
+.applicationletter-closing {
     margin-top: 2rem;
 }
 
-.closing strong {
+.applicationletter-closing strong {
     color: #0d3b5a;
 }

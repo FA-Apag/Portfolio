@@ -1,4 +1,4 @@
-import "./skills.css";
+import "./skillcard.css";
 
 type Skill = {
   name: string;
@@ -18,25 +18,25 @@ export default function ToolSkillCard() {
   return (
     <div className="w-[340px] rounded-md border-[3px] border-black bg-[#F6D7DF] shadow-xl overflow-hidden">
       {/* Header */}
-      <div className="header">
-        <h1 className="header-title">
+      <div className="skillcard-header">
+          <h1 className="skillcard-header-title">
           Checked Skills 
         </h1>
-        <p className="header-subtitle">
+        <p className="skillcard-header-subtitle">
           Skill Collection Card
         </p>
       </div>
 
       {/* Information */}
-      <div className="info-section">
-        <div className="info-box">
-          <p className="info-label">Category</p>
-          <p className="info-value">Design</p>
+      <div className="skillcard-info-section">
+        <div className="skillcard-info-box">
+          <p className="skillcard-info-label">Category</p>
+          <p className="skillcard-info-value">Design</p>
         </div>
 
-        <div className="p-2">
-          <p className="info-label">Owner</p>
-          <p className="info-value">Farrah Apag</p>
+        <div className="skillcard-info-box">
+          <p className="skillcard-info-label">Owner</p>
+          <p className="skillcard-info-value">Farrah Apag</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ export default function ToolSkillCard() {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="flex items-center justify-between border-b border-dashed border-[#B98999] px-4 py-2"
+            className="flex items-center justify-between border-b border-dashed border-[#8B5A46] px-4 py-2"
           >
             <span className="font-medium uppercase">
               {skill.name}
@@ -69,7 +69,7 @@ export default function ToolSkillCard() {
       </div>
 
       {/* Footer */}
-      <div className="footer">
+      <div className="skillcard-footer">
         <span>Issued 2025</span>
         <span>Collection No. 9869</span>
       </div>

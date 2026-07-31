@@ -25,8 +25,6 @@ export default function SkillsChecklist() {
     setChecked(updated);
   };
 
-  const completed = checked.filter(Boolean).length;
-
   return (
     <div className="checklist-card">
       <div className="header">
@@ -50,22 +48,7 @@ export default function SkillsChecklist() {
         ))}
       </div>
 
-      <div className="progress-section">
-        <p className="progress-title">Progress</p>
-
-        <div className="progress-bar">
-          <div
-            className="progress-fill"
-            style={{
-              width: `${(completed / skills.length) * 100}%`,
-            }}
-          ></div>
-        </div>
-
-        <p className="progress-text">
-          {completed} / {skills.length} Completed
-        </p>
-      </div>
+      <p className="perfect-day-prompt">WRITE DOWN YOUR PERFECT DAY</p>
     </div>
   );
 }

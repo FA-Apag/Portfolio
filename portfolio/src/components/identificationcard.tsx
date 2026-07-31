@@ -60,11 +60,12 @@ export default function IdentificationCard({
       className={`identification-card-wrapper ${isSlipped ? 'slipped' : ''}`}
       style={{
          position: 'absolute',
-         top: '50%',
+         top: '0.5rem',
          left: '50%',
-         transform: `translate(calc(-15% + ${position.x}px), calc(-60% + ${position.y}px)) scale(0.65) rotate(2deg)`,
+         transform: `translate(calc(-15% + ${position.x}px), ${position.y}px) scale(0.65) rotate(2deg)`,
+         transformOrigin: 'top center',
          transition: isDragging ? 'none' : 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)',
-         zIndex: isSlipped ? 10 : 2,
+         zIndex: 20,
          cursor: isDragging ? 'grabbing' : 'grab'
       }}
       onPointerDown={handlePointerDown}
