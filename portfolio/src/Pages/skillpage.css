@@ -1,12 +1,132 @@
+.skills-page {
+    background: #fefefe;
 
-.skill-page {
-  background-color: #780001;
-  height: 85vh;
-  margin: 0;
-  padding: .5rem 1.5rem 0 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  box-sizing: border-box;
-  position: relative;
+    width: calc(30% + 840px);
+    margin-left: calc(35% - 420px);
+ 
+    border-left: 2px solid #1c1c1c;
+    border-right: 2px solid #1c1c1c;
+    border-bottom: 2px solid #1c1c1c;
+
+    border-radius: 0 0 10px 10px;
+
+    padding: 55px 60px 45px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Giant title */
+
+.skills-title {
+    font-family: "Anton", sans-serif;
+    font-size: 85px;
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -0.05em;
+
+    color: #30221E;
+    text-align: center;
+    margin: 0 0 -18px;
+}
+
+/* 4 Columns */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    border: 1px solid pink;
+    gap: 10px;
+    align-items: start;
+}
+
+/* Card */
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: start; 
+    width: 180px;
+}
+
+/* Image */
+
+.skill-image {
+    object-fit: cover;
+}
+
+.skill-frontend, .skill-backend {
+    width: 180px;
+    height: 218px;
+    
+    object-fit: cover;
+
+    margin-bottom: 18px;
+}
+
+.skill-design, .skill-tools {
+    width: 180px;
+    height: 112px;
+
+    object-fit: cover;
+
+    margin-bottom: 18px;
+}
+
+/* Category */
+
+.skill-card h3 {
+
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #30221E;
+}
+
+/* Skill List */
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+border: 1px solid blue;
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 10px;
+    align-items: start;
+}
+
+.skill-item span {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #7b716d;
+}
+
+.skill-item p {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    color: #30221E;
+}
+
+/* Page Number */
+
+.page-number {
+    margin-top: 30px;
+
+    text-align: right;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    letter-spacing: .08em;
+
+    color: #7b716d;
 }

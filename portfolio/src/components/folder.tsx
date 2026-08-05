@@ -8,6 +8,7 @@ interface FolderProps {
   top?: string;
   active?: boolean;
   onClick?: () => void;
+  style?: React.CSSProperties; // <-- Added this
 }
 
 export default function Folder({
@@ -18,6 +19,7 @@ export default function Folder({
   top,
   active = false,
   onClick,
+  style, // <-- Destructure style here
 }: FolderProps) {
   return (
     <button
@@ -28,6 +30,7 @@ export default function Folder({
         position: "relative",
         left,
         top,
+        ...style, // <-- Spread custom styles here
       }}
       onClick={onClick}
     >

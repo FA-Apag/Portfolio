@@ -1,0 +1,67 @@
+.folder-tab {
+  /* Keep your existing background and positioning */
+  background-color: #fefefe;
+  color: #1C3F60;
+  
+  /* Add the border only to the top, left, and right (omit bottom) */
+  border-top: 2px solid #1c1c1c;
+  border-left: 2px solid #1c1c1c;
+  border-right: 2px solid #1c1c1c;
+  border-bottom: none; /* Crucial so it merges with the line below */
+  
+  /* Ensure rounded top corners for the tab */
+  border-radius: 8px 8px 0 0; 
+  
+  /* Keep it in front using z-index as discussed previously */
+  position: relative;
+  z-index: 10;
+}
+
+
+.static-folder:hover {
+    transform: none !important;
+}
+
+.folder-group {
+  pointer-events: none; /* Disable pointer events on the full-width wrapper */
+}
+.folder-group > div {
+  pointer-events: auto; /* Re-enable pointer events on the actual children (tabs and previews) */
+}
+.folder-line,
+.folder-line-wrapper {
+  pointer-events: none !important; /* Ensure the wide folder lines never catch the mouse */
+}
+
+.page-preview {
+  margin-top: -15px;
+  padding-top: 15px;
+  pointer-events: auto;
+}
+
+.page-preview > div {
+  max-height: 150px !important;
+  overflow: hidden !important;
+  transition: max-height 0.3s ease;
+}
+
+.page-full > div {
+  max-height: 1000px !important;
+  overflow: hidden !important;
+  transition: max-height 0.5s ease;
+}
+
+.page-expanded {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.page-expanded > div {
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  border-radius: 0px !important;
+  max-height: none !important;
+}

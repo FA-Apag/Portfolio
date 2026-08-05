@@ -1,126 +1,65 @@
-.about-page {
-  background-color: #002F49;
-  margin: 0;
-  padding: .5rem 1.5rem 0 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  box-sizing: border-box;
-  position: relative;
+.aboutme{
+    display:flex;
+    align-items:center;
+
 }
 
-.paper-stack {
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0.75rem 1rem 1.75rem 0;
+
+.aboutme-info{
+    flex:1;
+    margin-left: 200px;
 }
 
-.application-paper,
-.application-paper-trigger,
-.education-paper-trigger {
-  width: 100%;
-  height: clamp(28rem, 58vw, 38rem);
+.aboutme-info section{
+    margin-bottom: 20px;
 }
 
-.application-paper-trigger {
-  --paper-x: 0rem;
-  --paper-y: 0rem;
-  --lift: 0rem;
-  position: relative;
-  z-index: 2;
-  display: block;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  text-align: left;
-  transform: translate(var(--paper-x), calc(var(--paper-y) + var(--lift)));
-  transition: transform 360ms ease, filter 220ms ease;
+.aboutmetitle{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #30221E;
+    margin-bottom: -15px;
 }
 
-.application-paper-trigger .application-letter {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+.aboutmeInfo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #30221E;
+    margin-bottom: -1px;
 }
 
-.application-paper-trigger:hover,
-.application-paper-trigger:focus-visible {
-  --lift: -0.45rem;
-  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.2));
-  outline: none;
+.aboutme-image {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 300px;
+    height: max-content;
+    left: 90px;   /* Moves the whole camera 20px to the right */
+
+    transition: transform .2s ease;
 }
 
-.education-paper-trigger {
-  --paper-x: -1.25rem;
-  --paper-y: -1.4rem;
-  --lift: 0rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  text-align: left;
-  cursor: pointer;
-  transform: translate(var(--paper-x), calc(var(--paper-y) + var(--lift)));
-  transition: transform 360ms ease, filter 220ms ease;
+.aboutme-image:hover {
+    transform: scale(1.02);
+}
+.camera-screen {
+    position: absolute;
+
+    /* Adjust these until they line up */
+    top: 6px;
+    left: 32px;
+
+    width: 161px;
+    height: 207px;
+    overflow: hidden;
 }
 
-.education-paper-trigger:hover,
-.education-paper-trigger:focus-visible {
-  --lift: -0.45rem;
-  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.2));
-  outline: none;
-}
-
-.education-paper-trigger .education-paper {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow: auto;
-}
-
-.paper-stack.education-in-front .education-paper-trigger {
-  --paper-x: 0rem;
-  --paper-y: 0rem;
-  z-index: 3;
-}
-
-.paper-stack.education-in-front .application-paper {
-  z-index: 1;
-}
-
-.paper-stack.education-in-front .application-paper-trigger {
-  --paper-x: -1.25rem;
-  --paper-y: -1.4rem;
-  z-index: 1;
-}
-
-.paper-stack.application-in-front .application-paper-trigger {
-  z-index: 3;
-}
-
-@media (max-width: 640px) {
-  .paper-stack {
+.camera-photo {
     width: 100%;
-    padding-right: 1rem;
-  }
+    height: 100%;
+    object-fit: cover;
 
-  .education-paper-trigger {
-    --paper-x: -1rem;
-    --paper-y: -1.1rem;
-  }
-
-  .education-paper-trigger:hover,
-  .education-paper-trigger:focus-visible {
-    --lift: -0.4rem;
-  }
-
-  .paper-stack.education-in-front .application-paper-trigger {
-    --paper-x: -1rem;
-    --paper-y: -1.1rem;
-  }
+    transition: opacity .2s ease;
 }

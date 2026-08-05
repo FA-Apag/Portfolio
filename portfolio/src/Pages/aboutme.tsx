@@ -1,47 +1,75 @@
-import { useState } from "react";
-import IdentificationCard from "@/components/identificationcard";
-import ApplicationLetter from "@/components/applicationletter";
-import "../../style.css";
-
 import "./aboutme.css";
-import EducationPaper from "@/components/educationpaper";
+import camera from "../assets/camera.png"; 
+import certificateaward from "../assets/certificateaward.jpg"; 
+import ceremonyaward from "../assets/ceremonyaward.jpg"; 
+import groupaward from "../assets/groupeaward.jpg"; 
+import gradpic from "../assets/gradpic.jpg"; 
+import { useState } from "react";
 
-export default function AboutMe() {
-  const [frontPaper, setFrontPaper] = useState<"application" | "education">("application");
+export default function AboutMePage() {
+  const photos = [
+  gradpic,
+  groupaward,
+  ceremonyaward,
+  certificateaward,
+];
 
+const [currentPhoto, setCurrentPhoto] = useState(0);
+
+const nextPhoto = () => {
+  setCurrentPhoto((prev) => (prev + 1) % photos.length);
+};
   return (
-    <section className="about-page">
-      <div className={`paper-stack ${frontPaper}-in-front`}>
-        <button
-          type="button"
-          className="application-paper-trigger"
-          onClick={() => setFrontPaper("application")}
-          aria-label="Bring application letter to the front"
-        >
-          <ApplicationLetter />
-        </button>
-        <button
-          type="button"
-          className="education-paper-trigger"
-          onClick={() => setFrontPaper("education")}
-          aria-label="Bring education paper to the front"
-        >
-          <EducationPaper />
-        </button>
+    <div
+      className="aboutme"
+      style={{
+        backgroundColor: "#fefefe",
+        width: "calc(30% + 800px)",
+        marginLeft: "calc(35% - 400px)",
+        border: "2px solid #1c1c1c",
+        borderTop: "none",
+        borderRadius: "0 0 10px 10px",
+        padding: "50px 60px",
+        marginTop: "-2px",
+      }}
+    >
+      {/* Left */}
+    <div className="aboutme-image" onClick={nextPhoto}>
+      <img src={camera} alt="Camera" className="camera" />
+
+      <div className="camera-screen">
+        <img
+          src={photos[currentPhoto]}
+          alt="Memory"
+          className="camera-photo"
+        />
       </div>
-      <IdentificationCard  
-        name={"farrah sophia a. apag"} 
-        age={"22"} 
-        gender={"female"} 
-        ethnicity={"filipino"} 
-        role={"fontend developer"} 
-        basedin={"philippines"} 
-        email={"fsa.apag@gmail.com"} 
-        linkedin={"farrah apag"} 
-        github={""} 
-        issueddate={"2024-06-01"} 
-        cardno={"01."}>    
-      </IdentificationCard>
-    </section>
+    </div>
+
+      {/* Right */}
+      <div className="aboutme-info">
+
+        <section>
+          <p className="aboutmetitle">EDUCATION</p>
+
+          <p className="aboutmeInfo">Xavier University – Ateneo de Cagayan</p>
+          <p className="aboutmeInfo">Bachelor of Information Technology 2022–2026</p>
+        </section>
+
+        <section>
+          <p className="aboutmetitle">LANGUAGE</p>
+
+          <p className="aboutmeInfo">Tagalog · Native</p>
+          <p className="aboutmeInfo">English · C1 Advanced</p>
+        </section>
+        
+        <section>
+          <p className="aboutmetitle">ORIGIN</p>
+
+          <p className="aboutmeInfo">  [ Ethnicity ] Filipino</p>
+          <p className="aboutmeInfo"> [ Based In ] Philippines</p>
+        </section>
+      </div>
+    </div>
   );
 }

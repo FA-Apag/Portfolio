@@ -14,8 +14,19 @@
     font-weight: bold;
     font-size: 1.5rem;
     cursor: pointer;
+    
+    display: block;
+}
 
-     box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.15);
+.folder::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    pointer-events: auto;
 }
 
 .folder::before {
@@ -55,11 +66,10 @@
     width: 100%;
     height: 45px;
     position: relative;
-
-    /* NEW */
-    box-shadow:
-        0 4px 8px rgba(0,0,0,.08);
+    pointer-events: none;
+    border-bottom: none !important;
 }
+
 
 /* Extend the folder color downwards to prevent white gaps on hover and slide */
 .folder-line::after {
@@ -80,16 +90,30 @@
 .folder-group {
     position: relative;
     transition: transform 0.25s ease;
+    will-change: transform; /* Prevents layer flickering during translateY */
 }
 
 /* Every folder after the first overlaps the one above it */
 .folder-group:not(:first-child) {
     margin-top: -0.7in;
 }
+/* Base stack layers (Tab groups stay BELOW the front active folder) */
+.folder-group:nth-child(1) { z-index: 1; }
+.folder-group:nth-child(2) { z-index: 2; }
+.folder-group:nth-child(3) { z-index: 3; }
+.folder-group:nth-child(4) { z-index: 4; }
 
-/* Lift non-active and non-animating folders on hover */
+/* The main active front folder MUST be higher than all tabs */
+.folder-group.active {
+    z-index: 10 !important;
+}
+
+
+
+/* Lift non-active folders AND bring them to the front while hovered */
 .folder-group:not(.active):not(.pull-out):not(.slide-in):hover {
-    transform: translateY(-4px);
+    transform: translateY(-40px);
+
 }
 
 /* Pull-and-Stack Animation Classes */

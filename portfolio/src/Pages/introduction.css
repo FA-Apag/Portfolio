@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+
+.intro-container {
+    width: 100%;
+    min-height: 120vh;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+
+.introduction-page {
+    min-height: 400px;
+    width: "calc(30% + 760px)";
+    marginLeft: "calc(35% - 380px)";
+    box-sizing: border-box;
+
+  background-color: #fefefe;
+  width: calc(30% + 760px);
+
+  /* Left, Right, and Bottom border only */
+  border-left: 2px solid #1c1c1c;
+  border-right: 2px solid #1c1c1c;
+  border-bottom: 2px solid #1c1c1c;
+  
+}
+
+/* Left side */
+.intro-content {
+    width: 470px;
+}
+
+.intro-content h1 {
+    margin: 0 0 25px;
+
+    font-size: 90px;
+    font-family: Arial Black, sans-serif;
+    line-height: 0.9;
+
+    color: #2b1d18;
+}
+
+.intro-content p {
+    margin-bottom: 28px;
+
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.1;
+
+    color: #534640;
+}
+
+.introduction-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.023em;
+    color: #30221e;
+}
+
+.intro-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Adjust to your liking */
+}
+
+.intro-paragraphs p {
+    margin: 0; /* Remove default paragraph margins */
+}
+
+
+.intro-image {
+  position: relative;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  margin-left: -10px; /* Move right */
+}
+
+.intro-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Shared handwritten text */
+.note {
+  position: absolute;
+  font-family: "Sarina", cursive;
+  color: #3b241d;
+  line-height: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Shared arrows */
+
+
+/* ---------- Positions ---------- */
+
+.name {
+  top: 70px;
+  left: 10px;
+  font-size: 1.3rem;
+}
+
+.arrow-name {
+  position: absolute;
+
+  top: 35px;      /* Smaller = higher */
+  right: 100px;    /* Larger = more to the left */
+
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.role {
+  top: 170px;
+  right: -10px;
+  font-size: 1rem;
+}
+
+.arrow-role {
+  transform: rotate(160deg);
+
+  position: absolute;
+
+  top: 190px;      /* Smaller = higher */
+  right: -145px;    /* Larger = more to the left */
+
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.age {
+  top: 165px;
+  left: 40px;
+  font-size: 1rem;
+}
+
+.arrow-age {
+  transform: rotate(250deg);
+  transform: scaleY(-1); /* Vertical flip */
+
+  position: absolute;
+
+  top: 180px;      /* Smaller = higher */
+  right: 100px;    /* Larger = more to the left */
+
+  width: 40px;
+  height: 40px;
+  object-fit: contain; 
+}
+
+.graduate {
+  top: 60px;
+  right: 1px;
+  font-size: 0.6rem;
+  text-align: left;
+}
+
+
+.arrow-grad {
+  transform: scaleX(-1);
+  /*transform: scaleY(-1); /* Vertical flip */
+
+  position: absolute;
+
+  top: 30px;      /* Smaller = higher */
+  right: -50px;    /* Larger = more to the left */
+
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
