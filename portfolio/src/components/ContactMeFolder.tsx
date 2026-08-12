@@ -1,18 +1,11 @@
 import { useState } from "react";
 import Folder from "./folder";
-import IntroductionPage from "../Pages/introduction";
 import "./WhoAmIFolder.css"
 import ContactPage from "@/Pages/contactpage";
 
 export default function ContactFolder({ onClose }: { onClose: () => void }) {
   const [introHovered, setIntroHovered] = useState(false);
   const [introPinned] = useState(false);
-
-  const [aboutHovered, setAboutHovered] = useState(false);
-  const [aboutPinned] = useState(false);
-
-  const [skillsHovered, setSkillsHovered] = useState(false);
-  const [skillsPinned] = useState(false);
 
   const [activePage, setActivePage] = useState<string | null>(null);
 

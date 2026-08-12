@@ -7,9 +7,6 @@ import InternshipPage from "@/Pages/internship";
 import facultyClearanceImg from "../assets/faculty_clearance_faculty_homepage.png";
 
 export default function ProjectFolder({ onClose }: { onClose: () => void }) {
-  const [studentEvalHovered, setStudentEvalHovered] = useState(false);
-  const [studentEvalPinned] = useState(false);
-
   const [capstoneHovered, setCapstoneHovered] = useState(false);
   const [capstonePinned] = useState(false);
 
@@ -18,7 +15,6 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
 
   const [activePage, setActivePage] = useState<string | null>(null);
 
-  const showStudentEval = studentEvalHovered && activePage !== 'studenteval';
   const showCapstone = capstoneHovered && activePage !== 'capstone';
   const showInternship = internshipHovered && activePage !== 'internship';
 
