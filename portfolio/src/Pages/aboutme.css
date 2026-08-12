@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
 .aboutme{
     display:flex;
     align-items:center;
@@ -7,7 +9,7 @@
 
 .aboutme-info{
     flex:1;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 .aboutme-info section{
@@ -17,14 +19,14 @@
 .aboutmetitle{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 55px;
     color: #30221E;
     margin-bottom: -15px;
 }
 
 .aboutmeInfo{
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 15px;
     color: #30221E;
     margin-bottom: -1px;
@@ -34,11 +36,17 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-    width: 300px;
+    width: 360px;
     height: max-content;
     left: 90px;   /* Moves the whole camera 20px to the right */
 
     transition: transform .2s ease;
+}
+
+.camera {
+    width: 100%;
+    display: block;
+    height: auto;
 }
 
 .aboutme-image:hover {
@@ -47,12 +55,12 @@
 .camera-screen {
     position: absolute;
 
-    /* Adjust these until they line up */
-    top: 6px;
-    left: 32px;
+    /* Scaled by 1.2 to match the new 360px camera width */
+    top: 7.2px;
+    left: 38.4px;
 
-    width: 161px;
-    height: 207px;
+    width: 193.2px;
+    height: 248.4px;
     overflow: hidden;
 }
 

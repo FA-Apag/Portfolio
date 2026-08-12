@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "../../style.css";
 import WhoAmIFolder from "../components/WhoAmIFolder";
+import ProjectFolder from "../components/ProjectFolder";
+import ContactFolder from "@/components/ContactMeFolder";
 
 interface HomepageProps {
   onRollComplete?: () => void;
@@ -23,8 +25,9 @@ export default function Homepage({
   foldersRevealed,
 }: HomepageProps) {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isWhoAmIOpen, setIsWhoAmIOpen] = useState(false);
+  const [isProjectOpen, setIsProjectOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   useEffect(() => {
     if (onRevealFolders && !foldersRevealed) {
       const timer = setTimeout(() => {
@@ -38,9 +41,9 @@ export default function Homepage({
     <section className="flex flex-col items-center justify-center min-h-screen w-full bg-transparent relative overflow-hidden">
       
       {/* Scattered Folders */}
-      <FolderIcon text="contact_me" style={{ top: "25%", left: "25%" }} />
-      <FolderIcon text="recent_project" style={{ top: "20%", right: "10%" }} />
-      <FolderIcon text="who_am_i?" style={{ bottom: "20%", left: "15%" }} onClick={() => setIsModalOpen(true)} />
+      <FolderIcon text="contact_me" style={{ top: "25%", left: "25%" }} onClick={() => { setIsContactOpen(true);}}/>
+      <FolderIcon text="recent_project" style={{ top: "20%", right: "10%" }} onClick={() => { setIsProjectOpen(true);}}/>
+      <FolderIcon text="who_am_i?" style={{ bottom: "20%", left: "15%" }} onClick={() => setIsWhoAmIOpen(true)} />
 
       <div className="z-10 text-center flex flex-col items-center justify-center relative">
         
@@ -65,7 +68,23 @@ export default function Homepage({
         </p>
       </div>
 
-      {isModalOpen && <WhoAmIFolder onClose={() => setIsModalOpen(false)} />}
+      {isWhoAmIOpen && (
+        <WhoAmIFolder
+          onClose={() => setIsWhoAmIOpen(false)}
+        />
+      )}
+
+      {isProjectOpen && (
+        <ProjectFolder
+          onClose={() => setIsProjectOpen(false)}
+        />
+      )}
+
+      {isContactOpen && (
+        <ContactFolder
+          onClose={() => setIsContactOpen(false)}
+        />
+      )}
     </section>
   );
 }

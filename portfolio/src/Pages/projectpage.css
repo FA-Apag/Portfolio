@@ -1,0 +1,764 @@
+/* ===========================
+   Shared Page Layout
+=========================== */
+
+.project-page {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 55px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+/* ===========================
+   Top Tab
+=========================== */
+
+.project-tab {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+
+  width: 330px;
+  height: 42px;
+
+  background: #fefefe;
+
+  border: 2px solid #1c1c1c;
+  border-bottom: none;
+
+  border-radius: 20px 20px 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-tab-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.page-navigation {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.project-header {
+  width: 70%;
+}
+
+.project-title {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 40px; 
+  font-weight: 700;
+  line-height: 1.05;
+
+  color: #1c1c1c;
+}
+
+.project-subtitle {
+  margin-top: 10px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 20px;
+
+  color: #555;
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.project-description {
+  font-size: 18px; 
+  margin-left: 40%;
+  margin-top: 70px;
+}
+
+.project-description p {
+  margin: 0 0 20px;
+
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.1;
+
+  color: #444;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.project-footer {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.project-role {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 0px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.project-role-title {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #1c1c1c;
+}
+
+/* ===========================
+   Next Button
+=========================== */
+
+.next-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin-top: -10px;
+  morgin-right: 20px;
+}
+
+
+.next-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+}
+
+.prev-arrow {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 38px;
+  line-height: 0.8;
+
+  color: #1c1c1c;
+  cursor: pointer;
+
+  transition: transform 0.25s ease;
+}
+
+.prev-arrow:hover {
+  transform: translateX(6px);
+}
+
+.next-arrow {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 38px;
+  line-height: 0.8;
+
+  color: #1c1c1c;
+  cursor: pointer;
+
+  transition: transform 0.25s ease;
+}
+
+.next-arrow:hover {
+  transform: translateX(6px);
+}
+
+.next-text {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1;
+
+  color: #666;
+}
+
+/* ===========================
+   Page 1 Overrides
+=========================== */
+
+.project-page-3 {
+  margin-right: 40px;
+}
+
+
+.project-page-1 {}
+
+.project-tab-1 {}
+
+.project-content-1 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.project-header-1 {}
+
+.project-title-1 {
+  
+}
+
+.project-subtitle-1 {}
+
+.project-description-1 {
+  margin-top: 20px;  
+}
+
+.project-footer-1 {}
+
+.project-role-1 {}
+
+.project-role-title-1 {}
+
+.label-1 {}
+
+.next-project-1 {}
+
+.next-arrow-1 {}
+
+.next-text-1 {}
+
+/* ===========================
+   Future Pages
+=========================== */
+
+.project-page-2 {}
+
+.project-tab-2 {}
+
+.project-content-2 {
+  min-height: 100%;
+  height: auto;
+  overflow-y: auto;
+
+}
+
+.project-header-2 {}
+
+.project-title-2 {}
+
+.project-subtitle-2 {}
+
+.project-description-2 {}
+
+.project-footer-2 {}
+
+
+
+/* =========================================
+   PAGE 2 — INTERACTIVE DEMO
+========================================= */
+
+.project-content-2 {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+
+
+
+  background: #ffffff;
+  color: #2b201d;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.project-header-2 {
+  width: 100%;
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.project-title-2 {
+  margin: 0;
+
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.025em;
+
+  color: #2b201d;
+}
+
+.project-subtitle-2 {
+  margin: 8px 0 0;
+
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  color: #2b201d;
+}
+
+
+/* =========================================
+   DEMO GRID
+========================================= */
+
+.demo-grid-2 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  column-gap: 40px;
+  row-gap: 35px;
+
+  align-items: start;
+}
+
+/* =========================================
+   ROLE BLOCK
+========================================= */
+
+.demo-role {
+  display: flex;
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+
+/* Role positioning */
+
+.demo-role-faculty {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.demo-role-approver {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.demo-role-admin {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.demo-role-analytics {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.demo-role-assistant {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.demo-number {
+  flex-shrink: 0;
+
+  width: 22px;
+
+  padding-top: 3px;
+
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  line-height: 1.35;
+
+  color: #2b201d;
+}
+
+
+/* =========================================
+   ROLE CONTENT
+========================================= */
+
+.demo-role-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* Role title */
+
+.demo-role-content h2 {
+  margin: 0 0 8px;
+
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  font-size: clamp(1.15rem, 1.7vw, 1.7rem);
+  font-weight: 400;
+
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+
+  color: #2b201d;
+}
+
+
+/* Page list */
+
+.demo-role-content p {
+  margin: 0;
+
+  max-width: 170px;
+
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  line-height: 1.35;
+
+  color: #2b201d;
+}
+
+
+/* =========================================
+   EXPLORE LINK
+========================================= */
+
+.demo-link {
+  margin-top: 9px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+
+  color: #2b201d;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  transition: transform 0.2s ease;
+}
+
+.demo-link span {
+  font-size: 10px;
+
+  transition: transform 0.2s ease;
+}
+
+.demo-link:hover {
+  transform: translateX(3px);
+}
+
+.demo-link:hover span {
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.demo-footer-2 {
+  width: 100%;
+  max-width: 780px;
+
+  margin: 25px auto 0;
+
+  padding-top: 12px;
+
+  border-top: 1px solid rgba(43, 32, 29, 0.25);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Footer label */
+
+.demo-footer-2 > span {
+  font-family: Arial, sans-serif;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+
+  color: #2b201d;
+}
+
+
+/* Full demo */
+
+.full-demo-link {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+
+  color: #2b201d;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  transition: transform 0.2s ease;
+}
+
+.full-demo-link span {
+  font-size: 13px;
+
+  transition: transform 0.2s ease;
+}
+
+.full-demo-link:hover {
+  transform: translateX(3px);
+}
+
+.full-demo-link:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   PAGE 3 — KEY CONTRIBUTIONS
+========================================= */
+
+.project-content-3 {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+
+  background: #fff;
+  color: #2b201d;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+  padding-right: 35px;
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.project-header-3 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.project-title-3 {
+  margin: 0;
+
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: 400;
+
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+
+  color: #2b201d;
+}
+
+
+/* =========================================
+   CONTRIBUTIONS
+========================================= */
+
+.contributions-list-3 {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0;
+  
+  font-family: "Inria Serif", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   CONTRIBUTION ITEM
+========================================= */
+
+.contribution-item-3 {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  column-gap: 25px;
+  align-items: start;
+
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.contribution-number {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #555 !important;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.contribution-text {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  color: #444;
+}
+
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.project-footer-3 {
+  width: 100%;
+
+  margin-top: auto;
+  padding-top: 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+/* =========================================
+   PREVIOUS PAGE
+========================================= */
+
+.previous-project-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  cursor: pointer;
+}
+
+.previous-arrow {
+  font-size: 24px;
+  line-height: 1;
+
+  color: #1c1c1c;
+
+  transition: transform 0.2s ease;
+}
+
+.previous-project-3:hover .previous-arrow {
+  transform: translateX(-5px);
+}
+
+.previous-text {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 15px;
+  font-style: italic;
+
+  color: #666;
+}
+
+
+/* =========================================
+   TECH STACK
+========================================= */
+
+.tech-stack-3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 15px;
+  font-style: italic;
+
+  color: #666;
+
+  text-align: right;
+}

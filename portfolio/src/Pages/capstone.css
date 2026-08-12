@@ -1,10 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
+.capstone-github-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 8px;
+  color: #2b201d;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.capstone-github-link:hover {
+  color: #666;
+}
+
 .skills-page {
     display:flex;
-    flex-direction: column;
     align-items:center;
-    padding-top: 200px;
     padding-bottom: 40px;
     position: relative;
 }
@@ -22,8 +36,14 @@
     margin: 0;
 
     z-index: 0;
-    position: relative;
+    pointer-events: none;
+    position: absolute;
+
+    top: 30px;      
+    left: 0;
+    right: 0;
     width: 100%;
+    white-space: nowrap;
 }
 
 /* 4 Columns */
@@ -35,10 +55,9 @@
     justify-content: center;
     align-items: start;
     
-
     position: relative;
     z-index: 10;
-    margin-top: -30px; /* Pull up to overlap the title */
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -115,21 +134,3 @@
 }
 
 
-/* Page Number */
-
-.page-number {
-    position: relative;
-
-    top: 30px;      /* Y position */
-    right: 35px;    /* X position */
-
-    text-align: right;
-
-    font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    letter-spacing: .08em;
-
-    color: #7b716d;
-    z-index: 1000;
-    cursor: pointer;
-}

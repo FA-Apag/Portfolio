@@ -1,26 +1,26 @@
 import { useState } from "react";
 import Folder from "./folder";
-import IntroductionPage from "../Pages/introduction";
-import AboutMePage from "../Pages/aboutme";
 import "./WhoAmIFolder.css"
-import SkillsPage from "@/Pages/skillpage";
+import StudentEvalPage from "@/Pages/studenteval";
+import CapstonePage from "@/Pages/capstone";
+import InternshipPage from "@/Pages/internship";
+import facultyClearanceImg from "../assets/faculty_clearance_faculty_homepage.png";
 
-export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
-  const [introHovered, setIntroHovered] = useState(false);
-  const [introPinned] = useState(false);
+export default function ProjectFolder({ onClose }: { onClose: () => void }) {
+  const [studentEvalHovered, setStudentEvalHovered] = useState(false);
+  const [studentEvalPinned] = useState(false);
 
-  const [aboutHovered, setAboutHovered] = useState(false);
-  const [aboutPinned] = useState(false);
+  const [capstoneHovered, setCapstoneHovered] = useState(false);
+  const [capstonePinned] = useState(false);
 
-  const [skillsHovered, setSkillsHovered] = useState(false);
-  const [skillsPinned] = useState(false);
+  const [internshipHovered, setInternshipHovered] = useState(false);
+  const [internshipPinned] = useState(false);
 
   const [activePage, setActivePage] = useState<string | null>(null);
 
-  const showIntro = introHovered && activePage !== 'intro';
-  const showAbout = aboutHovered && activePage !== 'about';
-  const showSkills = skillsHovered && activePage !== 'skills';
-
+  const showStudentEval = studentEvalHovered && activePage !== 'studenteval';
+  const showCapstone = capstoneHovered && activePage !== 'capstone';
+  const showInternship = internshipHovered && activePage !== 'internship';
 
   if (activePage) {
     return (
@@ -48,9 +48,9 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
             <div className="relative">
 
               {/* Folder Tab */}
-              {activePage === "intro" && (
+              {activePage === "studenteval" && (
                 <Folder
-                  title="introduction"
+                  title="Academic Student Evaluation System"
                   color="#fefefe"
                   textColor="#1c1c1c"
                   left="60%"
@@ -65,9 +65,9 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                 />
               )}
 
-              {activePage  === "about" && (
+              {activePage  === "capstone" && (
                 <Folder
-                  title="about me"
+                  title="XU Faculty ClearTrack"
                   color="#fefefe"
                   textColor="#1c1c1c"
                   left="30%"
@@ -82,10 +82,9 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                 />
               )}
 
-              {activePage === "skills" && (
-
+              {activePage === "internship" && (
                 <Folder
-                  title="skills"
+                  title="Internship Management System"
                   color="#fefefe"
                   textColor="#1c1c1c"
                   left="20%"
@@ -101,9 +100,9 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
               )}
 
               {/* Page */}
-              {activePage === "intro" && <IntroductionPage />}
-              {activePage === "about" && <AboutMePage />}
-              {activePage === "skills" && <SkillsPage />}
+              {activePage === "studenteval" && <StudentEvalPage page={1} />}
+              {activePage === "capstone" && <CapstonePage page={1} />}
+              {activePage === "internship" && <InternshipPage page={1} />}
 
             </div>
           </div>
@@ -124,22 +123,22 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
             <Folder title="" color="#1c1c1c" textColor="#fff" left="0" />
             <div className="folder-line" style={{ backgroundColor: "#1c1c1c" }} />
           </div>
-          
+          {/* Folder Container with a higher z-index 
           <div className="folder-group"
-              onMouseEnter={() => setIntroHovered(true)}
+              onMouseEnter={() => setStudentEvalHovered(true)}
               onMouseLeave={() => {
-                if (!introPinned) setIntroHovered(false);
+                if (!studentEvalPinned) setStudentEvalHovered(false);
               }}
           >
             <div
               style={{ position: "relative", zIndex: 10, display: "inline-block", cursor: "pointer" }}
               onClick={() => {
-                setActivePage('intro');
-                setIntroHovered(false);
+                setActivePage('studenteval');
+                setStudentEvalHovered(false);
               }}
             >
                 <Folder 
-                  title="introduction" 
+                  title="Academic Student Evaluation System" 
                   color="#fefefe" 
                   textColor="#1c1c1c" 
                   left="170%" 
@@ -154,7 +153,7 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                 />
               </div>
             
-              {/* Folder Line positioned behind it */}
+              
             
             <div className="folder-line-wrapper">
             <div className="folder-line" 
@@ -163,34 +162,35 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                       marginLeft: "calc(35% - 380px)", 
                       borderRadius: "10px 10px 0 0",
                       border: "2px solid #1c1c1c",
-                      position: "relative", // Ensures z-index works
-                      zIndex: 1,            // Lower than the folder
+                      position: "relative",
+                      zIndex: 1,
                       marginTop: "-2px",    
                   }} />
             </div>
-            {showIntro && (
+            {showStudentEval && (
               <div className="page-preview">
-                <IntroductionPage />
+                <StudentEvalPage page={1} />
               </div>
             )}
           </div>
+          */}
           
           <div className="folder-group"
-              onMouseEnter={() => setAboutHovered(true)}
+              onMouseEnter={() => setCapstoneHovered(true)}
               onMouseLeave={() => {
-                if (!aboutPinned) setAboutHovered(false);
+                if (!capstonePinned) setCapstoneHovered(false);
               }}
           >
             {/* Folder Container with a higher z-index */}
             <div 
               style={{ position: "relative", zIndex: 10, display: "inline-block", cursor: "pointer" }}
               onClick={() => {
-                setActivePage('about');
-                setAboutHovered(false);
+                setActivePage('capstone');
+                setCapstoneHovered(false);
               }}
             >
                 <Folder 
-                  title="about me" 
+                  title="XU Faculty ClearTrack" 
                   color="#fefefe" 
                   textColor="#1c1c1c" 
                   left="80%" 
@@ -210,8 +210,8 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
               marginLeft: "calc(35% - 400px)", 
               borderRadius: "10px 10px 0 0",  
               border: "2px solid #1c1c1c",
-              position: "relative", // Ensures z-index works
-              zIndex: 1,            // Lower than the folder
+              position: "relative",
+              zIndex: 1,
               marginTop: "-2px",    
               }}
             />
@@ -220,33 +220,51 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
               
               marginLeft: "calc(35% - 400px)", 
               borderRadius: "10px 10px 0 0", 
-              position: "relative", // Ensures z-index works
-              zIndex: 1,            // Lower than the folder
+              position: "relative",
+              zIndex: 1,
               marginTop: "-2px",    
               }}></div>
-            {showAbout && (
-              <div className="page-preview">
-                <AboutMePage />
+            {showCapstone && (
+              <div className="page-preview" 
+                style={{ 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  alignItems: 'center', 
+                  padding: '20px',
+                  backgroundColor: '#fefefe',
+                  width: 'calc(30% + 800px)', 
+                  marginLeft: 'calc(35% - 400px)',
+                  border: '2px solid #1c1c1c',
+                  borderTop: 'none',
+                  marginTop: '-2px',
+                  borderRadius: '0 0 8px 8px', 
+                }}
+              >
+                <img 
+                  src={facultyClearanceImg} 
+                  alt="Faculty Clearance Homepage" 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' }} 
+                />
               </div>
             )}
             </div>
           
           <div className="folder-group"
-              onMouseEnter={() => setSkillsHovered(true)}
+              onMouseEnter={() => setInternshipHovered(true)}
               onMouseLeave={() => {
-                if (!skillsPinned) setSkillsHovered(false);
+                if (!internshipPinned) setInternshipHovered(false);
               }}
           >
             {/* Folder Container with a higher z-index */}
             <div 
               style={{ position: "relative", zIndex: 10, display: "inline-block", cursor: "pointer" }}
               onClick={() => {
-                setActivePage('skills');
-                setSkillsHovered(false);
+                setActivePage('internship');
+                setInternshipHovered(false);
               }}
             >
                 <Folder 
-                  title="skills" 
+                  title="Internship Management System" 
                   color="#fefefe" 
                   textColor="#1c1c1c" 
                   left="10%" 
@@ -270,14 +288,14 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                   marginLeft: "calc(35% - 420px)", 
                   borderRadius: "10px 10px 0 0",
                   border: "2px solid #1c1c1c",
-                  position: "relative", // Ensures z-index works
-                  zIndex: 1,            // Lower than the folder
-                  marginTop: "-2px",    // Optional: pull it up slightly to overlap the border cleanly
+                  position: "relative",
+                  zIndex: 1,
+                  marginTop: "-2px",
                 }} 
               />
-            {showSkills && (
+            {showInternship && (
               <div className="page-preview">
-                <SkillsPage /> 
+                <InternshipPage page={1} /> 
               </div>
             )}
           </div>
