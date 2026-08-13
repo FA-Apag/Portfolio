@@ -1,4 +1,4 @@
-import "./Folder.css";
+import "./folder.css";
 
 interface FolderProps {
   title: string;
