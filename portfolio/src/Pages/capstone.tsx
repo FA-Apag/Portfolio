@@ -28,7 +28,7 @@ import SystemAdminFacultyDataDumpVideo from "../assets/videos/SystemAdminFaculty
 import SystemAdminManageSystemUsersVideo from "../assets/videos/SystemAdminManageSystemUsers.mp4";
 
 import assistantdashboardVideo from "../assets/videos/AssistantDashboard.mp4";
-import assistantclearancerequestVideo from "../assets/videos/assistantclearancerequest.mp4";
+import assistantclearancerequestVideo from "../assets/videos/Assistantclearancerequest.mp4";
 
 import facultyDashboardVideo from "../assets/videos/facultyDashboard.mp4";
 import facultyClearanceRevordsVideo from "../assets/videos/FacultyClearanceRecords.mp4";
