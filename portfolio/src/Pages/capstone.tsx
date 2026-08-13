@@ -444,8 +444,20 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           ]}
           onOpenVideo={openVideo}
         />
-        <p>
-          <a href="https://github.com/yourusername/your-repo" target="_blank" rel="noopener noreferrer">
+        <p style={{ margin: 0 }}>
+          <a
+            href="https://github.com/kemsk/BoysenBuddies-FacultyClearance"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "impact, sans-serif",
+              fontSize: "32px",
+              color: "#332a26",
+              textTransform: "none",
+              letterSpacing: "normal",
+              textDecoration: "none",
+            }}
+          >
             Github Link
           </a>
         </p>
