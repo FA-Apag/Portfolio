@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "./projectpage.css";
 import "./capstone.css";
 import announcementsVideo from "../assets/videos/Announcements.mp4";
@@ -27,6 +28,7 @@ import SystemAdminFacultyDataDumpVideo from "../assets/videos/SystemAdminFaculty
 import SystemAdminManageSystemUsersVideo from "../assets/videos/SystemAdminManageSystemUsers.mp4";
 
 import assistantdashboardVideo from "../assets/videos/AssistantDashboard.mp4";
+import assistantclearancerequestVideo from "../assets/videos/assistantclearancerequest.mp4";
 
 import facultyDashboardVideo from "../assets/videos/facultyDashboard.mp4";
 import facultyClearanceRevordsVideo from "../assets/videos/FacultyClearanceRecords.mp4";
@@ -110,6 +112,11 @@ type CapstonePageProps = {
 export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProps) {
   const [page, setPage] = useState<1 | 2 | 3>(initialPage);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const openVideo = (video: string) => {
     setSelectedVideo(video);
@@ -129,7 +136,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
         marginTop: "-2px",
       }}
     >
-      {selectedVideo && (
+      {selectedVideo && mounted && createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -138,7 +145,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           style={{
             position: "fixed",
             inset: 0,
-            zIndex: 1000,
+            zIndex: 9999,
             display: "grid",
             placeItems: "center",
             padding: "24px",
@@ -174,7 +181,8 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
               style={{ display: "block", width: "100%", maxHeight: "80vh" }}
             />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
 
