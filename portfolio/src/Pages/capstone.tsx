@@ -439,7 +439,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Clearance Requests",
-              video: "assistantclearancerequestVideo",
+              video: assistantclearancerequestVideo,
             },
             /*{
               name: "Archived Clearance",
