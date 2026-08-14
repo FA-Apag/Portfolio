@@ -100,7 +100,12 @@
 
 .contact-pill.resume {
   top: 40%;
-  right: 5%;
+  right: -10%;
+}
+
+.contact-pill.github-2 {
+  top: 60%;
+  right: 10%;
 }
 
 /* Add the plumbob */

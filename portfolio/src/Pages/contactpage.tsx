@@ -79,7 +79,7 @@ export default function ContactPage() {
             className="contact-pill github"
           >
             <img src={githubIcon} alt="" />
-            <span>Farrah Apag</span>
+            <span>farrahApag</span>
           </a>
 
           <a
@@ -89,6 +89,16 @@ export default function ContactPage() {
           >
             <img src={resumeIcon} alt="Resume" />
             <span>Download CV</span>
+          </a>
+
+          <a
+            href="https://github.com/farrahApag"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-pill github-2"
+          >
+            <img src={githubIcon} alt="" />
+            <span>FA-Apag</span>
           </a>
         </div>
       </div>
