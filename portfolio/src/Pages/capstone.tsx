@@ -525,7 +525,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           <div className={`project-footer project-footer-${page}`}>
 
             <div className={`tech-stack tech-stack-${page}`}>
-              React, JavaScript, Tailwind CSS, MySQL, Docker, Git/GitHub, JWT, Figma, RESTful APIs, Vite, Progressive Web Application(PWA),
+              React / JavaScript / Tailwind CSS / MySQL / Docker / Git/GitHub / JWT /Figma / RESTful API /, Vite / Progressive Web Application(PWA)
             </div>
 
             <div className="page-navigation">

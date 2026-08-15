@@ -101,6 +101,9 @@ export default function SkillsPage() {
           "Express.js",
           "MySQL",
           "REST APIs",
+          "MongoDB",
+           "Python",
+           "RESTful APIs"
         ]}
       />
 
@@ -117,6 +120,7 @@ export default function SkillsPage() {
           "npm",
           "Chrome DevTools",
           "Vercel",
+          "Storybook",
         ]}
       />
 
