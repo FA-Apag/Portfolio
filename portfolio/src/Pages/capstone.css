@@ -63,13 +63,7 @@
 
 /* Card */
 
-.skill-card {
-    display: grid;
-    grid-template-rows: 240px auto 1fr;
-    row-gap: 20px;
-    width: 220px;
-    justify-items: center;
-}
+
 
 /* Image */
 
@@ -92,14 +86,6 @@
 
 /* Category */
 
-.skill-card a {
-    font-family: "Anton", sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: #30221E;
-    margin: 0;
-    text-align: left;
-}
 
 /* Skill List */
 

@@ -73,6 +73,9 @@ export default function SkillsPage() {
           "React",
           "Tailwind CSS",
           "Bootstrap",
+          "Progressive Web Application",
+          "SEO fundamentals",
+          "Vite"
         ]}
       />
 

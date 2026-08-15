@@ -46,7 +46,7 @@
 
 .skill-card {
     display: grid;
-    grid-template-rows: 240px auto 1fr;
+    grid-template-rows: 50px auto 1fr;
     row-gap: 20px;
     width: 220px;
     justify-items: center;
@@ -87,13 +87,14 @@
 .skill-list {
     display: flex;
     flex-direction: column;
-    gap: -2px;
+    gap: 8px;
+    width: 100%;
 }
 
 .skill-item {
     display: grid;
     grid-template-columns: 30px 1fr;
-    column-gap: 25px;
+    column-gap: 20px;
     align-items: center;
 }
 
@@ -111,7 +112,7 @@
     font-weight: 400;
     color: #30221E;
     line-height: 1.2;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 
