@@ -58,13 +58,13 @@ export default function Homepage({
           className="text-[#3b2d28] font-bold tracking-tighter m-0" 
           style={{ fontSize: "clamp(3.5rem, 8vw, 6.5rem)", lineHeight: 1.1, fontFamily: "'Poppins', sans-serif" }}
         >
-          Frontend Developer
+          Fullstack Developer
         </h1>
         <p 
           className="text-[#4a3b32] font-normal m-0 mt-1" 
           style={{ fontSize: "clamp(1.2rem, 2vw, 1.8rem)", fontFamily: "'Poppins', sans-serif" }}
         >
-          Building thoughtful digital experiences.
+          Frontend at heart, full-stack by practice
         </p>
       </div>
 

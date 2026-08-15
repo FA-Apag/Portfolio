@@ -196,7 +196,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             </h1>
 
             <p className={`project-subtitle project-subtitle-${page}`}>
-              xavier university ateneo cagayan de oro 
+              Xavier University Ateneo Cagayan De Oro 
               <span> | 2025 - 2026</span>
             </p>
           </div>
@@ -525,7 +525,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           <div className={`project-footer project-footer-${page}`}>
 
             <div className={`tech-stack tech-stack-${page}`}>
-              React / JavaScript / Tailwind CSS / MySQL / Docker / Git/GitHub / JWT /Figma / RESTful API /, Vite / Progressive Web Application(PWA)
+              React / JavaScript / Tailwind CSS / MySQL / Docker / Git/GitHub / JWT /Figma / RESTful API / Vite / Progressive Web Application(PWA)
             </div>
 
             <div className="page-navigation">
