@@ -2,17 +2,11 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import "./projectpage.css";
 import "./capstone.css";
-import announcementsVideo from "../assets/videos/Announcements.mp4";
-import notificationVideo from "../assets/videos/SystemAdminNotifications.mp4";
 import MenuRoleVideo from "../assets/videos/MenuRole.mp4";
 import LoginVideo from "../assets/videos/login.mp4";
 
 import approverdashboardVideo from "../assets/videos/ApproverDashboard.mp4";
 import approverrequirementlistVideo from "../assets/videos/ApproverRequirementList.mp4";
-import approverapproverassistantVideo from "../assets/videos/ApproverApproverAssistants.mp4";
-import approverclearancerequests from "../assets/videos/ApproverClearanceRequests.mp4";
-import approveractionsVideo from "../assets/videos/ApproverActions.mp4";
-import approveractivitylogs from "../assets/videos/ApproverActivityLogs.mp4";
 
 
 import systemAdminDashboardVideo from "../assets/videos/SystemAdminDashboard.mp4";
@@ -22,7 +16,6 @@ import systemguidelinesVideo from "../assets/videos/SystemGuidelines.mp4";
 import systemadminsetclearancetimelineVideo from "../assets/videos/SystemAdminSetClearanceTimeline.mp4";
 import systemviewfacultyimporthistoryVideo from "../assets/videos/SystemAdminViewFacultyImportHistory.mp4";
 import systemadminaccesscontrol from "../assets/videos/SystemAdminAccessControl.mp4";
-import systemadminactivitylogs from "../assets/videos/SystemAdminActivityLogs.mp4";
 import systemAdminCollegeOfficeConfigurationVideo from "../assets/videos/SystemAdminCollege&OfficeConfiguration.mp4";
 import SystemAdminFacultyDataDumpVideo from "../assets/videos/SystemAdminFacultyDataDump.mp4";
 import SystemAdminManageSystemUsersVideo from "../assets/videos/SystemAdminManageSystemUsers.mp4";
@@ -32,10 +25,6 @@ import assistantclearancerequestVideo from "../assets/videos/Assistantclearancer
 
 import facultyDashboardVideo from "../assets/videos/facultyDashboard.mp4";
 import facultyClearanceRevordsVideo from "../assets/videos/FacultyClearanceRecords.mp4";
-
-import analyticsAdminToolVideo from "../assets/videos/AnaylticsAdmintTools.mp4";
-import analyticsAdminActivityLogsVideo from "../assets/videos/AnaylticsAdminActivityLogs.mp4";
-import analyticsAdminDashboardVideo from "../assets/videos/AnaylticsAdminDashboard.mp4";
 
 type PageDemoProps = {
   title: string;
@@ -47,7 +36,8 @@ type PageDemoProps = {
 
 type DemoPage = {
   name: string;
-  video: string;
+  video?: string;
+  link?: string;
 };
 
 function PageDemo({ title, page, image, onOpenVideo }: PageDemoProps) {
@@ -60,13 +50,23 @@ function PageDemo({ title, page, image, onOpenVideo }: PageDemoProps) {
   {page.map((skill, index) => (
 <div
   key={skill.name}
-  onClick={() => onOpenVideo(skill.video)}
+  onClick={() => {
+    if (skill.link) {
+      window.open(skill.link, '_blank');
+    } else if (skill.video) {
+      onOpenVideo(skill.video);
+    }
+  }}
   role="button"
   tabIndex={0}
   onKeyDown={(event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      onOpenVideo(skill.video);
+      if (skill.link) {
+        window.open(skill.link, '_blank');
+      } else if (skill.video) {
+        onOpenVideo(skill.video);
+      }
     }
   }}
   style={{
@@ -201,19 +201,27 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             </p>
           </div>
 
-          <div className={`project-description project-description-${page}`}>
-            <p>
-              A responsive desktop and mobile web application developed for Xavier University – Ateneo de Cagayan to digitize and streamline the end-of-term faculty clearance process.
-            </p>
+<div className={`project-description project-description-${page}`}>
+  <p>
+    A responsive desktop and mobile Progressive Web Application (PWA) developed
+    for Xavier University – Ateneo de Cagayan to digitize and streamline the
+    end-of-term faculty clearance process.
+  </p>
 
-            <p>
-              The system enables faculty members to submit and track their clearance status in real time, while university offices can efficiently review, approve, and manage clearance requirements through role-based dashboards.
-            </p>
+  <p>
+    The system enables faculty members to submit and track their clearance
+    status in real time, while university offices can efficiently review,
+    approve, and manage clearance requirements through role-based dashboards.
+  </p>
 
-            <p>
-              It centralizes the clearance workflow, reduces manual processing, improves transparency, and enhances administrative efficiency. The project received the KSRA Award for its innovation and institutional impact.
-            </p>
-          </div>
+  <p>
+    It centralizes the clearance workflow, reduces manual processing, improves
+    transparency, and enhances administrative efficiency. As a PWA, the
+    application provides an app-like experience across desktop and mobile
+    devices. The project received the KSRA Award for its innovation and
+    institutional impact.
+  </p>
+</div>
 
           <div className={`project-footer project-footer-${page}`}>
             <div className={`project-role project-role-${page}`}>
@@ -273,7 +281,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           page={[
             {
               name: "Dashboard",
-              video: analyticsAdminDashboardVideo,
+              link: "https://youtu.be/y7P-EG9YzAU",
             },
             {
               name: "System Guideline",
@@ -281,23 +289,23 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Announcements",
-              video: announcementsVideo,
+              link: "https://youtu.be/hR8zSnnItYU",
             },
             {
               name: "Tools",
-              video: analyticsAdminToolVideo,
+              link: "https://youtu.be/DZeVuN5khVc",
             },
             {
               name: "System Analytics",
-              video: systemanalticsVideo,
+              link: "https://youtu.be/xdwcq25vR2w",
             },
             {
               name: "Activity Logs",
-              video: analyticsAdminActivityLogsVideo,
+              link: "https://youtu.be/QuGJuAYETDw",
             },
             {
               name: "Notifications",
-              video: notificationVideo,
+              link: "https://youtu.be/rEmSp3VCL10",
             }
           ]}
           onOpenVideo={openVideo}
@@ -319,7 +327,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
                 name: "Notification",
-                video: notificationVideo,
+                link: "https://youtu.be/rEmSp3VCL10",
               },
             ]}
               onOpenVideo={openVideo}
@@ -339,15 +347,15 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Clearance Requests",
-              video: approverclearancerequests,
+              link: "https://youtu.be/dTA1Tx3He0A",
             },
             {
               name: "Actions",
-              video: approveractionsVideo,
+              link: "https://youtu.be/tR2SHS2OZDI",
             },
             {
               name: "Approver Assistants",
-              video: approverapproverassistantVideo,
+              link: "https://youtu.be/VCa9vYO_oKM",
             },
             /* {
               name: "Archived Clearance",
@@ -355,11 +363,11 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             }, */
             {
               name: "Activity Logs",
-              video: approveractivitylogs,
+              link: "https://youtu.be/JsQWtR3phZM",
             },
             {
               name: "Notifications",
-              video: notificationVideo,
+              link: "https://youtu.be/rEmSp3VCL10",
             }
           ]}
           onOpenVideo={openVideo}
@@ -381,7 +389,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Announcements",
-              video: announcementsVideo,
+              link: "https://youtu.be/hR8zSnnItYU",
             },
             {
               name: "Tools",
@@ -417,11 +425,11 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Activity Logs",
-              video: systemadminactivitylogs,
+              
             },
             {
               name: "Notifications",
-              video: notificationVideo,
+              link: "https://youtu.be/rEmSp3VCL10",
             }
           ]}
           onOpenVideo={openVideo}
@@ -447,7 +455,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             }, */
             {
               name: "Notifications",
-              video: notificationVideo,
+              link: "https://youtu.be/rEmSp3VCL10",
             }
           ]}
           onOpenVideo={openVideo}
@@ -517,7 +525,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           <div className={`project-footer project-footer-${page}`}>
 
             <div className={`tech-stack tech-stack-${page}`}>
-              Python / CSS / MongoDB / JavaScript / HTML
+              React, JavaScript, Tailwind CSS, MySQL, Docker, Git/GitHub, JWT, Figma, RESTful APIs, Vite, Progressive Web Application(PWA),
             </div>
 
             <div className="page-navigation">
