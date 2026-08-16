@@ -101,7 +101,7 @@ export default function InternshipPage({ page: initialPage = 1 }: InternshipPage
           <div className={`project-footer project-footer-3`}>
 
             <div className={`tech-stack tech-stack-3`}>
-              CSS / React / TypeScript/JavaScript / Figma / Keycloak / JWT / OTP / Docker / Git/GitHub / Tailwind /Storybook
+              CSS / React / TypeScript/JavaScript / Figma / Keycloak / JWT / OTP / Docker / Git/GitHub / Tailwind / Storybook / ShadcnUI
 
             </div>
 
