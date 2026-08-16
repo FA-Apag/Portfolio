@@ -136,3 +136,16 @@
         transform: translateX(0);
     }
 }
+
+/* Mobile responsive folder tabs */
+@media (max-width: 767px) {
+    .folder {
+        width: 140px;
+        height: 40px;
+        font-size: 0.9rem;
+        border-radius: 12px 12px 0 0;
+    }
+    .folder::after {
+        height: 40px;
+    }
+}

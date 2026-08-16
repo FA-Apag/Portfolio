@@ -1,4 +1,5 @@
 import "./skillpage.css";
+import "./folderwidth.css";
 import { useState } from "react";
 
 import frontendImg from "../assets/frontend.png";
@@ -43,11 +44,10 @@ function SkillCategory({
 export default function SkillsPage() {
   const [page, setPage] = useState(1);
   return (
-    <div className="skills-page"
-        style={{
+    <div
+      className="skills-page folder-width-3"
+      style={{
         backgroundColor: "#fefefe",
-        width: "calc(30% + 840px)",
-        marginLeft: "calc(35% - 420px)",
         border: "2px solid #1c1c1c",
         borderTop: "none",
         marginTop: "-2px",

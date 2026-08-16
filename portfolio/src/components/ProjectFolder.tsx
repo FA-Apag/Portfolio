@@ -5,6 +5,7 @@ import StudentEvalPage from "@/Pages/studenteval";
 import CapstonePage from "@/Pages/capstone";
 import InternshipPage from "@/Pages/internship";
 import facultyClearanceImg from "../assets/faculty_clearance_faculty_homepage.png";
+import "../Pages/folderwidth.css";
 
 export default function ProjectFolder({ onClose }: { onClose: () => void }) {
   const [capstoneHovered, setCapstoneHovered] = useState(false);
@@ -117,7 +118,7 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
           
           <div className="folder-group static-folder">
             <Folder title="" color="#1c1c1c" textColor="#fff" left="0" />
-            <div className="folder-line" style={{ backgroundColor: "#1c1c1c" }} />
+            <div className="folder-line folder-width-0" style={{ backgroundColor: "#1c1c1c" }} />
           </div>
           {/* Folder Container with a higher z-index 
           <div className="folder-group"
@@ -200,10 +201,8 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
                   }}
                 />
             </div>
-            <div className="folder-line" 
+            <div className="folder-line folder-width-1" 
               style={{ backgroundColor: "#fefefe", 
-              width: "calc(30% + 800px)", 
-              marginLeft: "calc(35% - 400px)", 
               borderRadius: "10px 10px 0 0",  
               border: "2px solid #1c1c1c",
               position: "relative",
@@ -211,25 +210,20 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
               marginTop: "-2px",    
               }}
             />
-              <div style={{ backgroundColor: "#fefefe", 
-              width: "calc(30% + 800px)", 
-              
-              marginLeft: "calc(35% - 400px)", 
+              <div className="folder-width-1" style={{ backgroundColor: "#fefefe", 
               borderRadius: "10px 10px 0 0", 
               position: "relative",
               zIndex: 1,
               marginTop: "-2px",    
               }}></div>
             {showCapstone && (
-              <div className="page-preview" 
+              <div className="page-preview folder-width-1" 
                 style={{ 
                   display: 'flex', 
                   justifyContent: 'center', 
                   alignItems: 'center', 
                   padding: '20px',
                   backgroundColor: '#fefefe',
-                  width: 'calc(30% + 800px)', 
-                  marginLeft: 'calc(35% - 400px)',
                   border: '2px solid #1c1c1c',
                   borderTop: 'none',
                   marginTop: '-2px',
@@ -260,7 +254,7 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
               }}
             >
                 <Folder 
-                  title="Internship Management System" 
+                  title="Internship" 
                   color="#fefefe" 
                   textColor="#1c1c1c" 
                   left="10%" 
@@ -275,13 +269,10 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
                 />
             </div>
 
-              {/* Folder Line positioned behind it */}
               <div 
-                className="folder-line" 
+                className="folder-line folder-width-2" 
                 style={{ 
                   backgroundColor: "#fefefe", 
-                  width: "calc(30% + 840px)", 
-                  marginLeft: "calc(35% - 420px)", 
                   borderRadius: "10px 10px 0 0",
                   border: "2px solid #1c1c1c",
                   position: "relative",
@@ -298,13 +289,11 @@ export default function ProjectFolder({ onClose }: { onClose: () => void }) {
 
         <div className="folder-group active">
           <div
-              className="folder-line"
+              className="folder-line folder-width-3"
               style={{
                 backgroundColor: "#1c1c1c",
                 position: "relative",
                 top: "65px", 
-                width: "calc(30% + 880px)",
-                marginLeft: "calc(35% - 440px)",
                 height: "200px",
                 borderRadius: "20px 20px 0 0",
                 zIndex: 20, // <-- Higher than your folder tabs (which were around zIndex: 10)

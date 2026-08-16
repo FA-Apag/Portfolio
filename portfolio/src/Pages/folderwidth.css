@@ -1,0 +1,114 @@
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  .folder-height-0 {
+    height: 100px;
+  }
+  .folder-width-0 {
+    width: calc(50% + 130px);
+    margin-left: calc(25% - 65px);
+  }
+  .folder-width-1 {
+    width: calc(50% + 150px);
+    margin-left: calc(25% - 75px);
+  }
+  .folder-width-2 {
+    width: calc(50% + 170px);
+    margin-left: calc(25% - 85px);
+  }
+  .folder-width-3 {
+    width: calc(50% + 190px);
+    margin-left: calc(25% - 95px);
+  }
+  .folder-width-4 {
+    width: calc(50% + 210px);
+    margin-left: calc(25% - 105px);
+  }
+  .folder-width-5 {
+    width: calc(50% + 230px);
+    margin-left: calc(25% - 115px);
+  }
+
+  .folder-height-0 {
+    height: "100px";
+  }
+
+
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .folder-height-0 {
+    height: 150px;
+  }
+  .folder-width-0 {
+    width: calc(40% + 370px);
+    margin-left: calc(30% - 185px);
+  }
+  .folder-width-1 {
+    width: calc(40% + 400px);
+    margin-left: calc(30% - 200px);
+  }
+  .folder-width-2 {
+    width: calc(40% + 430px);
+    margin-left: calc(30% - 215px);
+  }
+  .folder-width-3 {
+    width: calc(40% + 460px);
+    margin-left: calc(30% - 230px);
+  }
+  .folder-width-4 {
+    width: calc(40% + 500px);
+    margin-left: calc(30% - 250px);
+  }
+  .folder-width-5 {
+    width: calc(40% + 540px);
+    margin-left: calc(30% - 270px);
+  }
+
+  .folder-height-0 {
+    height: "150px";
+  }
+
+}
+
+/* Desktop (> 1024px) */
+@media (min-width: 1025px) {
+  .folder-height-0 {
+    height: 200px;
+  }
+  .folder-width-0 {
+    /* Static Folder Background */
+    width: calc(30% + 720px);
+    margin-left: calc(35% - 360px);
+  }
+  .folder-width-1 {
+    /* Introduction, Contact */
+    width: calc(30% + 760px);
+    margin-left: calc(35% - 380px);
+  }
+  .folder-width-2 {
+    /* About Me */
+    width: calc(30% + 800px);
+    margin-left: calc(35% - 400px);
+  }
+  .folder-width-3 {
+    /* Skill, StudentEval */
+    width: calc(30% + 840px);
+    margin-left: calc(35% - 420px);
+  }
+  .folder-width-4 {
+    /* Internship */
+    width: calc(30% + 880px);
+    margin-left: calc(35% - 440px);
+  }
+  .folder-width-5 {
+    /* Capstone */
+    width: calc(30% + 900px);
+    margin-left: calc(35% - 450px);
+  }
+
+  .folder-height-0 {
+    height: "200px";
+  }
+}
+

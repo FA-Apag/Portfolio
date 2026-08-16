@@ -77,7 +77,7 @@ export default function ContactFolder({ onClose }: { onClose: () => void }) {
           
           <div className="folder-group static-folder">
             <Folder title="" color="#1c1c1c" textColor="#fff" left="0" />
-            <div className="folder-line" style={{ backgroundColor: "#1c1c1c" }} />
+            <div className="folder-line folder-width-0" style={{ backgroundColor: "#1c1c1c" }} />
           </div>
           
           <div className="folder-group"
@@ -111,7 +111,7 @@ export default function ContactFolder({ onClose }: { onClose: () => void }) {
             
               {/* Folder Line positioned behind it */}
             
-            <div className="folder-line-wrapper">
+            <div className="folder-line-wrapper folder-width-1">
             <div className="folder-line" 
               style={{ backgroundColor: "#fefefe", 
                       width: "calc(30% + 760px)", 
@@ -132,15 +132,13 @@ export default function ContactFolder({ onClose }: { onClose: () => void }) {
           
           
 
-        <div className="folder-group active">
+        <div className="folder-group active ">
           <div
-              className="folder-line"
+              className="folder-line folder-width-2 folder-height-0"
               style={{
                 backgroundColor: "#1c1c1c",
                 position: "relative",
                 top: "65px", 
-                width: "calc(30% + 880px)",
-                marginLeft: "calc(35% - 440px)",
                 height: "200px",
                 borderRadius: "20px 20px 0 0",
                 zIndex: 20, // <-- Higher than your folder tabs (which were around zIndex: 10)

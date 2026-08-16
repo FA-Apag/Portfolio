@@ -1,4 +1,5 @@
 import "./contactpage.css";
+import "./folderwidth.css";
 
 import personImg from "../assets/contactperson.png";
 import gmailIcon from "../assets/Gmail.png";
@@ -10,11 +11,9 @@ import resumeIcon from "../assets/Folder.png";
 export default function ContactPage() {
   return (
     <div
-      className="contact"
+      className="contact folder-width-1"
       style={{
-        backgroundColor: "#FEFEFE",
-        width: "calc(30% + 760px)",
-        marginLeft: "calc(35% - 380px)",
+        backgroundColor: "#fefefe",
         borderLeft: "2px solid #1c1c1c",
         borderRight: "2px solid #1c1c1c",
         borderBottom: "2px solid #1c1c1c",

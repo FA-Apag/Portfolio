@@ -122,7 +122,7 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
           
           <div className="folder-group static-folder">
             <Folder title="" color="#1c1c1c" textColor="#fff" left="0" />
-            <div className="folder-line" style={{ backgroundColor: "#1c1c1c" }} />
+            <div className="folder-line folder-width-0" style={{ backgroundColor: "#1c1c1c" }} />
           </div>
           
           <div className="folder-group"
@@ -142,7 +142,7 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                   title="introduction" 
                   color="#fefefe" 
                   textColor="#1c1c1c" 
-                  left="170%" 
+                  left="120%" 
                   style={{
                     borderTop: "2px solid #1c1c1c",
                     borderLeft: "2px solid #1c1c1c",
@@ -157,10 +157,8 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
               {/* Folder Line positioned behind it */}
             
             <div className="folder-line-wrapper">
-            <div className="folder-line" 
+            <div className="folder-line folder-width-1" 
               style={{ backgroundColor: "#fefefe", 
-                      width: "calc(30% + 760px)", 
-                      marginLeft: "calc(35% - 380px)", 
                       borderRadius: "10px 10px 0 0",
                       border: "2px solid #1c1c1c",
                       position: "relative", // Ensures z-index works
@@ -204,10 +202,8 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
                   }}
                 />
             </div>
-            <div className="folder-line" 
+            <div className="folder-line folder-width-2" 
               style={{ backgroundColor: "#fefefe", 
-              width: "calc(30% + 800px)", 
-              marginLeft: "calc(35% - 400px)", 
               borderRadius: "10px 10px 0 0",  
               border: "2px solid #1c1c1c",
               position: "relative", // Ensures z-index works
@@ -263,11 +259,9 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
 
               {/* Folder Line positioned behind it */}
               <div 
-                className="folder-line" 
+                className="folder-line folder-width-3 " 
                 style={{ 
                   backgroundColor: "#fefefe", 
-                  width: "calc(30% + 840px)", 
-                  marginLeft: "calc(35% - 420px)", 
                   borderRadius: "10px 10px 0 0",
                   border: "2px solid #1c1c1c",
                   position: "relative", // Ensures z-index works
@@ -284,14 +278,11 @@ export default function WhoAmIFolder({ onClose }: { onClose: () => void }) {
 
         <div className="folder-group active">
           <div
-              className="folder-line"
+              className="folder-line folder-width-4 folder-height-0"
               style={{
                 backgroundColor: "#1c1c1c",
                 position: "relative",
                 top: "65px", 
-                width: "calc(30% + 880px)",
-                marginLeft: "calc(35% - 440px)",
-                height: "200px",
                 borderRadius: "20px 20px 0 0",
                 zIndex: 20, // <-- Higher than your folder tabs (which were around zIndex: 10)
               }}

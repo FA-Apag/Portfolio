@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./projectpage.css";
+import "./folderwidth.css"
 type InternshipPageProps = {
   page: 1 | 2;
 };
@@ -8,11 +9,9 @@ export default function InternshipPage({ page: initialPage = 1 }: InternshipPage
   const [page, setPage] = useState<1 | 2>(initialPage);
   return (
     <div
-      className={`project-page project-page-${page}`}
+      className={`project-page project-page-${page} folder-width-2`}
       style={{
         backgroundColor: "#fefefe",
-        width: "calc(30% + 840px)",
-        marginLeft: "calc(35% - 420px)",
         border: "2px solid #1c1c1c",
         borderTop: "none",
         marginTop: "-2px",

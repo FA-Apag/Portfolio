@@ -1,15 +1,14 @@
 import "./introduction.css";
+import "./folderwidth.css";
 import profileImg from "../assets/introductionpicture.png"; // adjust the path
 import arrow from "../assets/arrowname.png"; // adjust the path
 export default function IntroductionPage() {
   return (
 
     <div
-      className="introduction"
+      className="introduction folder-width-1"
       style={{
         backgroundColor: "#fefefe",
-        width: "calc(30% + 760px)",
-        marginLeft: "calc(35% - 380px)",
         borderTop: "none",
         padding: "20px 60px 0px 60px",
         position: "relative",

@@ -2,12 +2,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import "./projectpage.css";
 import "./capstone.css";
-import MenuRoleVideo from "../assets/videos/MenuRole.mp4";
-import LoginVideo from "../assets/videos/login.mp4";
-
-import approverdashboardVideo from "../assets/videos/ApproverDashboard.mp4";
-import approverrequirementlistVideo from "../assets/videos/ApproverRequirementList.mp4";
-
+import "./folderwidth.css";
 
 import systemAdminDashboardVideo from "../assets/videos/SystemAdminDashboard.mp4";
 import systemanadmintoolsVideo from "../assets/videos/SystemAdminTools.mp4";
@@ -15,16 +10,9 @@ import systemanalticsVideo from "../assets/videos/SystemAnalytics.mp4";
 import systemguidelinesVideo from "../assets/videos/SystemGuidelines.mp4";
 import systemadminsetclearancetimelineVideo from "../assets/videos/SystemAdminSetClearanceTimeline.mp4";
 import systemviewfacultyimporthistoryVideo from "../assets/videos/SystemAdminViewFacultyImportHistory.mp4";
-import systemadminaccesscontrol from "../assets/videos/SystemAdminAccessControl.mp4";
 import systemAdminCollegeOfficeConfigurationVideo from "../assets/videos/SystemAdminCollege&OfficeConfiguration.mp4";
 import SystemAdminFacultyDataDumpVideo from "../assets/videos/SystemAdminFacultyDataDump.mp4";
 import SystemAdminManageSystemUsersVideo from "../assets/videos/SystemAdminManageSystemUsers.mp4";
-
-import assistantdashboardVideo from "../assets/videos/AssistantDashboard.mp4";
-import assistantclearancerequestVideo from "../assets/videos/Assistantclearancerequest.mp4";
-
-import facultyDashboardVideo from "../assets/videos/facultyDashboard.mp4";
-import facultyClearanceRevordsVideo from "../assets/videos/FacultyClearanceRecords.mp4";
 
 type PageDemoProps = {
   title: string;
@@ -124,11 +112,9 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
 
   return (
     <div
-      className={`project-page project-page-${page}`}
+      className={`project-page project-page-${page} folder-width-1`}
       style={{
         backgroundColor: "#fefefe",
-        width: "calc(30% + 900px)", 
-        marginLeft: "calc(35% - 450px)", 
         paddingLeft: "20px",
         paddingRight: "20px",
         border: "2px solid #1c1c1c",
@@ -266,11 +252,11 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           page={[
             {
               name: "Login",
-              video: LoginVideo,
+              link: "https://youtu.be/zR33cb7c6ZI",
             },
             {
               name: "Menu Role",
-              video: MenuRoleVideo,
+              link: "https://youtu.be/0Om2alZtSSs",
             }
           ]}
           onOpenVideo={openVideo}
@@ -319,11 +305,11 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           page={[
             {
               name: "Dashboard",
-              video: facultyDashboardVideo,
+              link: "https://youtu.be/rfYXKKVOGz8",
             },
             {
               name: "Clearance Record",
-              video: facultyClearanceRevordsVideo,
+              link: "https://youtu.be/blJaVMxt5Ok",
             },
             {
                 name: "Notification",
@@ -339,11 +325,11 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           page={[
             {
               name: "Dashboard",
-              video: approverdashboardVideo,
+              link: "https://youtu.be/W1ch9Kzjt38" ,
             },
             {
               name: "Requirements List",
-              video: approverrequirementlistVideo,
+              link: "https://youtu.be/X-g9WxFObzQ",
             },
             {
               name: "Clearance Requests",
@@ -417,7 +403,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Access Control",
-              video: systemadminaccesscontrol,
+              link: "https://youtu.be/C8R5PnnmNJU",
             },
             {
               name: "System Analytics",
@@ -425,7 +411,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Activity Logs",
-              
+              link: "https://youtu.be/sum-Y2vWcvk",
             },
             {
               name: "Notifications",
@@ -443,11 +429,11 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           page={[
             {
               name: "Dashboard",
-              video: assistantdashboardVideo,
+              link: "https://youtu.be/QhAgr7zeOc8",
             },
             {
               name: "Clearance Requests",
-              video: assistantclearancerequestVideo,
+              link: "https://youtu.be/f0qltOtS19M",
             },
             /*{
               name: "Archived Clearance",

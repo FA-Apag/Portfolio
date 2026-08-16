@@ -1,4 +1,5 @@
 import "./aboutme.css";
+import "./folderwidth.css";
 import camera from "../assets/camera.png"; 
 import certificateaward from "../assets/certificateaward.jpg"; 
 import ceremonyaward from "../assets/ceremonyaward.jpg"; 
@@ -21,11 +22,9 @@ const nextPhoto = () => {
 };
   return (
     <div
-      className="aboutme"
+      className="aboutme folder-width-2"
       style={{
         backgroundColor: "#fefefe",
-        width: "calc(30% + 800px)",
-        marginLeft: "calc(35% - 400px)",
         border: "2px solid #1c1c1c",
         borderTop: "none",
         borderRadius: "0 0 10px 10px",

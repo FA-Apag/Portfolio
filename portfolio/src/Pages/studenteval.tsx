@@ -1,4 +1,5 @@
 import "./projectpage.css";
+import "./folderwidth.css";
 type StudentEvalPageProps = {
   page: 1 | 2;
 };
@@ -6,11 +7,9 @@ type StudentEvalPageProps = {
 export default function StudentEvalPage({ page }: StudentEvalPageProps) {
   return (
     <div
-      className={`project-page project-page-${page}`}
+      className={`project-page project-page-${page} folder-width-3`}
       style={{
         backgroundColor: "#fefefe",
-        width: "calc(30% + 840px)",
-        marginLeft: "calc(35% - 420px)",
         border: "2px solid #1c1c1c",
         borderTop: "none",
         marginTop: "-2px",
