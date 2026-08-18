@@ -4,15 +4,7 @@ import "./projectpage.css";
 import "./capstone.css";
 import "./folderwidth.css";
 
-import systemAdminDashboardVideo from "../assets/videos/SystemAdminDashboard.mp4";
-import systemanadmintoolsVideo from "../assets/videos/SystemAdminTools.mp4";
-import systemanalticsVideo from "../assets/videos/SystemAnalytics.mp4";
 import systemguidelinesVideo from "../assets/videos/SystemGuidelines.mp4";
-import systemadminsetclearancetimelineVideo from "../assets/videos/SystemAdminSetClearanceTimeline.mp4";
-import systemviewfacultyimporthistoryVideo from "../assets/videos/SystemAdminViewFacultyImportHistory.mp4";
-import systemAdminCollegeOfficeConfigurationVideo from "../assets/videos/SystemAdminCollege&OfficeConfiguration.mp4";
-import SystemAdminFacultyDataDumpVideo from "../assets/videos/SystemAdminFacultyDataDump.mp4";
-import SystemAdminManageSystemUsersVideo from "../assets/videos/SystemAdminManageSystemUsers.mp4";
 
 type PageDemoProps = {
   title: string;
@@ -256,7 +248,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Menu Role",
-              link: "https://youtu.be/0Om2alZtSSs",
+              link: "https://youtu.be/YrGiLlbKe-k",
             }
           ]}
           onOpenVideo={openVideo}
@@ -367,7 +359,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
           page={[
             {
               name: "Dashboard",
-              video: systemAdminDashboardVideo,
+              link: "https://youtu.be/kXM2s7TuPbc",
             },
             {
               name: "System Guideline",
@@ -379,27 +371,27 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Tools",
-              video: systemanadmintoolsVideo,
+              link: "https://youtu.be/jpxt0qHS3zk",
             },
             {
               name: "Set Clearance Timeline",
-              video: systemadminsetclearancetimelineVideo,
+              link: "https://youtu.be/f8YzS2dh6bA",
             },
             {
               name: "College & Office Configuration",
-              video: systemAdminCollegeOfficeConfigurationVideo,
+              link: "https://youtu.be/9ZsKE-pSkc4",
             },
             {
               name: "Faculty Data Dump",
-              video: SystemAdminFacultyDataDumpVideo,
+              link: "https://youtu.be/KiBnAoX7TZI",
             },
             {
               name: "Manage System Users",
-              video: SystemAdminManageSystemUsersVideo,
+              link: "https://youtu.be/46XaY0dgA00",
             },
             {
               name: "Faculty Import History",
-              video: systemviewfacultyimporthistoryVideo,
+              link: "https://youtu.be/HM84liS3oh8",
             },
             {
               name: "Access Control",
@@ -407,7 +399,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "System Analytics",
-              video: systemanalticsVideo,
+              video: "https://youtu.be/C9mK7AdxllM",
             },
             {
               name: "Activity Logs",
@@ -415,7 +407,7 @@ export default function CapstonePage({ page: initialPage = 1 }: CapstonePageProp
             },
             {
               name: "Notifications",
-              link: "https://youtu.be/rEmSp3VCL10",
+              link: "https://youtu.be/37KFBBWLDU8",
             }
           ]}
           onOpenVideo={openVideo}
